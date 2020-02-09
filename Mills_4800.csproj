@@ -168,15 +168,21 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FlightDetailsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PassengersController.cs" />
+    <Compile Include="Controllers\PlanesController.cs" />
+    <Compile Include="DAL\MIS4200Mills.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\FlightDetail.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Vet.cs" />
+    <Compile Include="Models\Passenger.cs" />
+    <Compile Include="Models\Plane.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -237,6 +243,21 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Planes\Create.cshtml" />
+    <Content Include="Views\Planes\Delete.cshtml" />
+    <Content Include="Views\Planes\Details.cshtml" />
+    <Content Include="Views\Planes\Edit.cshtml" />
+    <Content Include="Views\Planes\Index.cshtml" />
+    <Content Include="Views\Passengers\Create.cshtml" />
+    <Content Include="Views\Passengers\Delete.cshtml" />
+    <Content Include="Views\Passengers\Details.cshtml" />
+    <Content Include="Views\Passengers\Edit.cshtml" />
+    <Content Include="Views\Passengers\Index.cshtml" />
+    <Content Include="Views\FlightDetails\Create.cshtml" />
+    <Content Include="Views\FlightDetails\Delete.cshtml" />
+    <Content Include="Views\FlightDetails\Details.cshtml" />
+    <Content Include="Views\FlightDetails\Edit.cshtml" />
+    <Content Include="Views\FlightDetails\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
