@@ -14,9 +14,7 @@
         <th>
             @Html.DisplayNameFor(model => model.planeName)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.planeTime)
-        </th>
+        
         <th></th>
     </tr>
 
@@ -25,9 +23,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.planeName)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.planeTime)
-        </td>
+        
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.planeID }) |
             @Html.ActionLink("Details", "Details", new { id=item.planeID }) |

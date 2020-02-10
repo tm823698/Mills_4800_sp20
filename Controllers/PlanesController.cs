@@ -18,7 +18,7 @@ namespace Mills_4800.Controllers
         // GET: Planes
         public ActionResult Index()
         {
-            return View(db.Plane.ToList());
+            return View(db.Planes.ToList());
         }
 
         // GET: Planes/Details/5
@@ -28,7 +28,7 @@ namespace Mills_4800.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Plane plane = db.Plane.Find(id);
+            Plane plane = db.Planes.Find(id);
             if (plane == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace Mills_4800.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Plane.Add(plane);
+                db.Planes.Add(plane);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace Mills_4800.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Plane plane = db.Plane.Find(id);
+            Plane plane = db.Planes.Find(id);
             if (plane == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace Mills_4800.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Plane plane = db.Plane.Find(id);
+            Plane plane = db.Planes.Find(id);
             if (plane == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace Mills_4800.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Plane plane = db.Plane.Find(id);
-            db.Plane.Remove(plane);
+            Plane plane = db.Planes.Find(id);
+            db.Planes.Remove(plane);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

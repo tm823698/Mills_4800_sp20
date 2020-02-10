@@ -25,11 +25,11 @@ namespace Mills_4800.DAL
 
         // and is the name used to reference the entity in code
 
-        public DbSet<Plane> Plane { get; set; }
+        public DbSet<Plane> Planes { get; set; }
 
-        public DbSet<Passenger> Passenger { get; set; }
+        public DbSet<Passenger> Passengers { get; set; }
 
-        public DbSet<FlightDetail> FlightDetail { get; set; }
+        public DbSet<FlightDetail> FlightDetails { get; set; }
 
         
     }

@@ -10,10 +10,10 @@ namespace Mills_4800.Models
     {
         [Key]
         public int planeID { get; set; }
-
-        public string planeName { get; set; }
         public string startingLocation { get; set; }
-        public ICollection<FlightDetail> FlightDetail { get; set; }
+        public string planeName { get; set; }
+        
+        public ICollection<FlightDetail> FlightDetails { get; set; }
     }
     
    

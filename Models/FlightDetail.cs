@@ -14,12 +14,12 @@ namespace Mills_4800.Models
         public int planeID { get; set; }
         public DateTime orderDate { get; set; }
 
-        public virtual Plane Plane { get; set; }
+        public virtual Plane Planes { get; set; }
 
         // the next two properties link the orderDetail to the Product
 
         public int productID { get; set; }
 
-        public virtual Passenger Passenger { get; set; }
+        public virtual Passenger Passengers { get; set; }
     }
 }

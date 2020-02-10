@@ -18,7 +18,7 @@ namespace Mills_4800.Controllers
         // GET: FlightDetails
         public ActionResult Index()
         {
-            return View(db.FlightDetail.ToList());
+            return View(db.FlightDetails.ToList());
         }
 
         // GET: FlightDetails/Details/5
@@ -28,7 +28,7 @@ namespace Mills_4800.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FlightDetail flightDetail = db.FlightDetail.Find(id);
+            FlightDetail flightDetail = db.FlightDetails.Find(id);
             if (flightDetail == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace Mills_4800.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.FlightDetail.Add(flightDetail);
+                db.FlightDetails.Add(flightDetail);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace Mills_4800.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FlightDetail flightDetail = db.FlightDetail.Find(id);
+            FlightDetail flightDetail = db.FlightDetails.Find(id);
             if (flightDetail == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace Mills_4800.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FlightDetail flightDetail = db.FlightDetail.Find(id);
+            FlightDetail flightDetail = db.FlightDetails.Find(id);
             if (flightDetail == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace Mills_4800.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            FlightDetail flightDetail = db.FlightDetail.Find(id);
-            db.FlightDetail.Remove(flightDetail);
+            FlightDetail flightDetail = db.FlightDetails.Find(id);
+            db.FlightDetails.Remove(flightDetail);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
