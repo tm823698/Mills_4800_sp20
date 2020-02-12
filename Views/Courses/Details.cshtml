@@ -1,0 +1,42 @@
+﻿@model Mills_4800.Models.Course
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Course</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.classTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.instructor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.instructor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.courseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
