@@ -26,13 +26,13 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                            Dropdown Example
+                            Student Registration
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a href="Courses">Courses</a></li>
-                            <li><a href="Students">Students</a></li>
-                            <li><a href="Registrations">Registrations</a></li>
+                            <li>@Html.ActionLink("Course", "Index", "Courses")</li>
+                            <li>@Html.ActionLink("Registration", "Index", "Registrations")</li>
+                            <li>@Html.ActionLink("Student", "Index", "Students")</li>
                         </ul>
                     </li>
                 </ul>
