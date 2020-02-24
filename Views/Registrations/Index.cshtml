@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Mills_4800.Models.Registration>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Registration Information";
 }
 
 <h2>Index</h2>
@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Course.classTime)
@@ -20,20 +20,21 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Course.classTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Student.firstName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.registrationID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.registrationID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.registrationID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.classTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student.firstName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.registrationID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.registrationID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.registrationID })
+            </td>
+        </tr>
+    }
 
 </table>

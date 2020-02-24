@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<Mills_4800.Models.Course>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Course Information";
 }
 
-<h2>Index</h2>
+    <h2>Course Information</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.classTime)
@@ -23,23 +23,24 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.classTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.instructor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.courseID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.courseID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.courseID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.classTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.instructor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.courseID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.courseID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.courseID })
+            </td>
+        </tr>
+    }
 
 </table>
