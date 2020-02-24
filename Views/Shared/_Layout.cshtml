@@ -24,22 +24,16 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                            Registration information
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                            <a class="dropdown-item" href="Courses">Courses</a> <br />
-
-                            <a class="dropdown-item" href="Registrations">Registrations</a> <br />
-
-                            <a class="dropdown-item" href="Students">Students</a>
-
-                        </div>
+                    <li class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            Dropdown Example
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="Courses">Courses</a></li>
+                            <li><a href="Students">Students</a></li>
+                            <li><a href="Registrations">Registrations</a></li>
+                        </ul>
                     </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
